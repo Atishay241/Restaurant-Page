@@ -1,3 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+  
+:root {
+    --font_head : "Permanent Marker", cursive;
+    --font-text: "Tangerine", cursive;
+    --header-bg: #ffffff;
+  --text-primary: #212121;
+  --accent-color: #ff3d00;   /* Candy Pink */    /* Pop color for hover or buttons */
+
+}
+
+.headertxt {
+    font-family: var(--font_head) , sans-serif;
+    font-size: 2.5rem;
+    margin: 30px;
+    color: var(--accent-color);
+}
+
+.headersvg {
+    height: 100px;
+    width: auto;
+    stroke:  #ef4423;;
+    animation: logo 3s ease infinite;
+    margin-left: 30px;
+}
+
+@keyframes logo {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-10px) rotate(-10deg); }
+    20% { transform: translateX(10px) rotate(10deg); }
+    30% { transform: translateX(-5px) rotate(-5deg); }
+    40% { transform: translateX(5px) rotate(5deg); }
+    50% { transform: translateX(0); } 
+    100% { transform: translateX(0); } 
+}
+.header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 7px 20px;
+    background-color: white;
+    justify-content: space-between;
+
+    box-shadow: 0 4px 6px darkgray; /* Subtle shadow */
+    margin-bottom: 30px;
+}
+.sticker {
+    display: flex;
+    align-items: center;
+}
+
+.tabs {
+    display: flex;
+    gap: 40px;
+}
+
 body {
-    background-color: rebeccapurple;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background: linear-gradient(to bottom, #fff8f2, #fff0e6) */
+}
+.tabsbtns {
+    color: var(--accent-color);
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-family: var(--font_head), sans-serif;
+    border: 2px solid transparent;
+    margin: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
+  
+  /* Glowing underline + background grow effect */
+  .tabsbtns::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent-color);
+    z-index: -1;
+    transition: width 0.4s ease;
+  }
+  
+  .tabsbtns:hover::before {
+    width: 100%;
+  }
+  
+  .tabsbtns:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aliceblue; */
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: #212121 ;
+    font-family: var(--font_head) , sans-serif;
+    font-size: 1.2rem;
+    
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .bodytext{
+    font-size: 2.6rem;
+    text-shadow: 1px 1px 2px var(--accent-color);
+  }
+
+  .meaning {
+    color: var(--accent-color);
+    font-family: var(--font-text),sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    /* text-align: center; */
+  }
+
+  .box {
+    border-radius: 16px;
+    height: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    animation: name 10s ease infinite;
+  }
+
+  @keyframes name{
+    0%{transform: scale(1);}
+    25%{transform: scale(1.2);}
+    50%{transform: scale(1);}
+    75%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+  }
+  
+  .menu {
+    padding: 20px 100px;
+  }
+  .name {
+    font-family: var(--font_head) , sans-serif;
+    margin: 20px;
+  }
+
+  .icon {
+    height: 100px;
+    width: auto;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+
+  }
+
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 200px;
+    width: 300px;
+    border-radius: 16px;
+    margin: 0; /* 🔧 REMOVE this */
+    padding: 20px;
+    transition: all 0.3s;
+  }
+
+  .cardtext {
+    font-family: var(--font-text) , sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+
+  .card:hover{
+    transform: scale(1.1);
+  }
+
+
+.container {
+    font-family: var(--font-text) , sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    gap: 50px;
+    font-size: 3rem;
+}
+
+section {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+section > h2 {
+    color: var(--accent-color);
+}
